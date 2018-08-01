@@ -16,6 +16,8 @@ namespace AddRes
     {
         string addres = null;
         string nasp;
+        string areaa;
+        string type;
         public Form1()
         {
             InitializeComponent();
@@ -39,12 +41,36 @@ namespace AddRes
             {
                 nasp = (address_data.city);
             }
+
+
             obl.Text = (address_data.region);
-            rn.Text = (address_data.area);
+
+            if (address_data.area != null)
+            {
+                areaa = (address_data.area);
+            }
+            else if (address_data.city != null)
+            {
+                areaa = (address_data.city_district);
+            }
+
+            rn.Text = areaa;
             nas.Text = nasp;
             yl.Text = (address_data.street);
             dom.Text = (address_data.house);
             kv.Text = (address_data.flat);
+
+            if (address_data.settlement_type_full != null)
+            {
+                type = (address_data.settlement_type_full);
+            }
+            else if (address_data.city_type_full != null)
+            {
+                type = (address_data.city_type_full);
+            }
+
+
+            typ.Text = type;
             comboBox1.Items.Add(string.Join("\n", response.suggestions[0]));
 
           
@@ -73,18 +99,53 @@ namespace AddRes
             {
                 nasp = (address_data.city);
             }
+
+
             obl.Text = (address_data.region);
-            rn.Text = (address_data.area);
+
+           if (address_data.area != null)
+            {
+                areaa = (address_data.area);
+            }
+            else if (address_data.city != null)
+            {
+                areaa = (address_data.city_district);
+            }
+
+            rn.Text = areaa;
             nas.Text = nasp;
             yl.Text = (address_data.street);
             dom.Text = (address_data.house);
             kv.Text = (address_data.flat);
+
+            if (address_data.settlement_type_full != null)
+            {
+                type = (address_data.settlement_type_full);
+            }
+            else if (address_data.city_type_full != null)
+            {
+                type = (address_data.city_type_full);
+            }
+
+
+            typ.Text = type;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             comboBox1.Text = "";
             comboBox1.Items.Clear();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            WebBrowser w = new WebBrowser();
+            w.Navigate("https://yandex.ru/");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
