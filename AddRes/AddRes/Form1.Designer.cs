@@ -37,7 +37,6 @@
             this.yl = new System.Windows.Forms.Label();
             this.dom = new System.Windows.Forms.Label();
             this.kv = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.typ = new System.Windows.Forms.Label();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,19 +129,6 @@
             this.kv.Name = "kv";
             this.kv.Size = new System.Drawing.Size(0, 17);
             this.kv.TabIndex = 7;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(279, 39);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(787, 489);
-            this.webBrowser1.TabIndex = 8;
-            this.webBrowser1.Url = new System.Uri("https://yandex.ru/maps/", System.UriKind.Absolute);
             // 
             // bunifuTileButton1
             // 
@@ -240,11 +227,33 @@
             this.typ.Size = new System.Drawing.Size(0, 18);
             this.typ.TabIndex = 17;
             // 
+            // gMapControl1
+            // 
+            this.gMapControl1.Bearing = 0F;
+            this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.LevelsKeepInMemmory = 5;
+            this.gMapControl1.Location = new System.Drawing.Point(266, 39);
+            this.gMapControl1.MarkersEnabled = true;
+            this.gMapControl1.MaxZoom = 2;
+            this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl1.Name = "gMapControl1";
+            this.gMapControl1.NegativeMode = false;
+            this.gMapControl1.PolygonsEnabled = true;
+            this.gMapControl1.RetryLoadTile = 0;
+            this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.ShowTileGridLines = false;
+            this.gMapControl1.Size = new System.Drawing.Size(787, 486);
+            this.gMapControl1.TabIndex = 18;
+            this.gMapControl1.Zoom = 0D;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 540);
+            this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.typ);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.label6);
@@ -254,7 +263,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuTileButton1);
-            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.kv);
             this.Controls.Add(this.dom);
             this.Controls.Add(this.yl);
@@ -284,7 +292,6 @@
         private System.Windows.Forms.Label yl;
         private System.Windows.Forms.Label dom;
         private System.Windows.Forms.Label kv;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -294,6 +301,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label typ;
+        public GMap.NET.WindowsForms.GMapControl gMapControl1;
     }
 }
 

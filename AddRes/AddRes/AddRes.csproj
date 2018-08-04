@@ -34,6 +34,12 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Rashody\Rashody\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>G:\22\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>G:\22\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\Александр\Desktop\suggestions-csharp-master\bin\Debug\nunit.framework.dll</HintPath>
     </Reference>
@@ -62,6 +68,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="gmap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
