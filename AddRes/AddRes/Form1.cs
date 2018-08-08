@@ -28,7 +28,9 @@ namespace AddRes
         public Form1()
         {
             InitializeComponent();
-            
+            data data = new data();
+            data.Op(this);
+
         }
 
         private void comboBox1_TextUpdate(object sender, EventArgs e)
@@ -141,6 +143,8 @@ namespace AddRes
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            data data = new data();
+            data.Up(this);
             comboBox1.Text = "";
             comboBox1.Items.Clear();
         }
@@ -148,7 +152,7 @@ namespace AddRes
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
                         
-            gmaps(17, 52.719970, 41.457008);   
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -185,6 +189,23 @@ namespace AddRes
 
             markersOverlay.Markers.Add(marker); //Добавляем маркер коллекцию.
             gMapControl1.Overlays.Add(markersOverlay); //Добавляем коллекцию в очередь на вывод на карту.
+        }
+
+        
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            gmaps(17, 52.747382, 41.413790); //(увеличение, долгота, ширина)
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            data data = new data();
+            data.Aut(this);
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
